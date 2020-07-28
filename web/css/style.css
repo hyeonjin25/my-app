@@ -8,14 +8,14 @@ background-color: #333; line-height: 30px; text-align: center;} /*절대적인 �
 #skip a:focus{top:0;}
 
 /*레이아웃*/
-#wrap{width: 100%;}
+#wrap{}
 #header{height: 325px;background: url(../img/header_bg.jpg) center top repeat-x}
-#contents{height: 800px; background: #222;}
+#contents{}
 #footer{height: 200px;background: #333;}
 
 /*컨텐츠 레이아웃*/
-#cont_nav{height: 200px; background: #333;}
-#cont_tit{height: 200px; background: #444;}
+#cont_nav{background-color: #f6fdff;}
+#cont_tit{background-color: #EAF7FD;}
 #cont_ban{height: 200px; background: #555;}
 #cont_cont{height: 200px; background: #666;}
 
@@ -33,4 +33,38 @@ padding: 5px 20px 10px 20px; display: inline-block; color:#fff; margin-top: 40px
 font-weight: normal; text-transform: uppercase;}
 .header .header-tit a{display: inline-block; background-color: #2698cb; font-size: 18px; color: #fff;
     padding: 5px 20px 6px 20px; margin-top: -5px;}
-.header .header-icon{}
+.header .header-icon{text-align: center; margin: 30px;}
+.header .header-icon a{width: 60px; height: 60px; display:inline-block; background: url(../img/icon.png); margin:0 3px;}
+.header .header-icon a.icon1 {background-position: 0 0;}
+.header .header-icon a.icon2 {background-position: 0 -60px;}
+.header .header-icon a.icon3 {background-position: 0 -120px;}
+.header .header-icon a.icon4 {background-position: 0 -180px;}
+.header .header-icon a.icon1:hover {background-position: -60px 0;}
+.header .header-icon a.icon2:hover {background-position: -60px -60px;}
+.header .header-icon a.icon3:hover {background-position: -60px -120px;}
+.header .header-icon a.icon4:hover {background-position: -60px -180px;}
+
+/* float: left로 인한 영역깨짐(height:0) 방지법
+1. 깨지는 영역에 똑같이 float: left를 사용한다.(x) --> 모든 박스에 float:left를 사용하게 됩니다.
+2. float의 성질을 차단하는 clear: both;를 사용한다.(x) --> 어떤 영역이 깨졌는지 찾기 어려움
+3. float을 사용한 상위 박스한테 overflow: hidden을 사용한다. (o) --> 현재는 제일 많이
+4. clearfix를 사용합니다. (o)
+*/
+
+/* 전체메뉴 */
+.nav{overflow: hidden; padding: 30px 0;}
+.nav > div {float: left; width: 40%;}
+.nav > div:last-child {width: 20%;} /* ie부터 사용 사능*/
+.nav > div.last {width: 20%;}
+.nav > div h3 {font-style: 18px; color: #25a2d0; margin-bottom: 4px;}
+.nav > div ol{ overflow: hidden;}
+.nav > div ol li{ float: left; width: 50%;}
+.nav > div.last ol li{width: 100%;}
+.nav > div ol li a:hover {text-decoration: underline;}
+
+/* 타이틀 */
+.tit {position: relative;}
+.tit h2 {font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4;
+    font-family: 'Nanum Brush Script', cursive;}
+.tit .btn {position: absolute; top: 5px; right: 0; width: 60px; height: 60px; 
+background: url(../img/icon.png) no-repeat 0 -600px;}
