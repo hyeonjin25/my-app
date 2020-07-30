@@ -76,7 +76,7 @@ background: url(../img/icon.png) no-repeat 0 -600px;}
 .ban a.next{position: absolute; right: -80px; top: 60px; width: 43px; height: 43px; background: url(../img/icon.png)
     no-repeat -150px -43px}
 .ban a.prev:hover {background-position: -193px 0;}
-.ban a.next:hover {background-position: -193px -43;}
+.ban a.next:hover {background-position: -193px -43px;}
 
 .ban ul {overflow: hidden;}
 .ban ul li {float: left; width: 330px;}
@@ -100,7 +100,7 @@ padding-right: 30px;}
 .cont .col6 {margin-right: 0; padding-right: 0;}    
 .cont .ico_img {display: block; width: 60px; height: 60px; background: url(../img/icon.png) no-repeat;
 position: absolute; left: 0; top: 0;}
-.cont .ico_tit {padding-left: 70PX; font-style: 16px; color: #2c94c4;}
+.cont .ico_tit {padding-left: 70PX; font-size: 16px; color: #2c94c4;}
 .cont .ico_decs {padding-left: 70PX; border-bottom: solid #d0d0d0; padding-bottom: 15px; margin-bottom: 15px;}
 
 .cont .col1 .ico_img {background-position: 0 -240px;}
